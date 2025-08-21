@@ -1,6 +1,6 @@
-// By Biden/pres_biden/Fentman/Inducible/whichever username I go by next lol
-// An official Fent production: https://discord.gg/4sMGGZ6bSX
-// Please reference the official repo: https://github.com/Inducible/Collatz-conjecture-Swift
+// Originated from the work of Biden/pres_biden/Fentman/Inducible/whichever username I go by next lol
+// Made with reference to an official Fent production: https://discord.gg/4sMGGZ6bSX
+// Feel free to reference this for the Fent version and more information: https://github.com/Inducible/Collatz-conjecture-Swift
 
 //Written by HAV0X_ with help from Inducible on 8/20/2025
 import Foundation
