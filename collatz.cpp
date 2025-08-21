@@ -1,4 +1,4 @@
-// Written with <3 by @DrParanoya
+// Written with <3 by @DrParanoya on 08/21/2025
 // Collatz Conjecture in C++14
 
 #include <chrono>

@@ -1,4 +1,4 @@
-// Written with <3 by @DrParanoya (this is my first multi-threaded program)
+// Written with <3 by @DrParanoya on 08/21/2025 (this is my first multi-threaded program)
 // Multi-Threaded Collatz Conjecture in C++14
 
 #include <array>
