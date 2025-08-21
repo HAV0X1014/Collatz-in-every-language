@@ -66,6 +66,7 @@ void collatz(const uint64_t start) {
 }
 
 int main() {
+	std::cout << "Collatz Conjecture from " << MIN << " to " << MAX << " running on " << NUM_THREADS << " threads\n" << std::endl;
 	auto a = std::chrono::high_resolution_clock::now();
 
 	std::array<std::thread, 4> threads{};
@@ -81,11 +82,10 @@ int main() {
 	double timeMilli = static_cast<double>(timeNano) / 1'000'000.0;
 	double timeSeconds = timeMilli / 1'000.0;
 	std::cout <<
-		"Collatz Conjecture - " << MIN << " to " << MAX << "\n\n" <<
 		"Total steps to reach 1: " << STEPS << " (peak: " << PEAK_STEPS << ", at num = " << PEAK_STEPS_START << ')' <<
 		"\nPeak number reached: " << PEAK <<
 		" (started at " << PEAK_START << ')' <<
-		"\n\nExecution time:\n  in nanoseconds: " << timeNano <<
-		"\n  in milliseconds: " << std::fixed << std::setprecision(3) << timeMilli << 
-		"\n  in seconds: " << std::fixed << std::setprecision(3) << timeSeconds << std::endl;
+		"\n\nExecution time\n  in nanoseconds: " << timeNano << '\n';
+        if (timeNano > 1'000'000) std::cout << "  in milliseconds: " << std::fixed << std::setprecision(3) << timeMilli << '\n';
+        if (timeMilli > 1000) std::cout << "  in seconds: " << std::fixed << std::setprecision(3) << timeSeconds << '\n';
 }
