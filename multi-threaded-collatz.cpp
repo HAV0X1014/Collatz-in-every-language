@@ -34,13 +34,18 @@ void collatz(const uint64_t start) {
 		num = i;
 		while (num != 1) {
 			if (num % 2) {
-				num = (num * 3 + 1) / 2;
-				steps += 2;
-			}
-			else {
-				num /= 2;
-				++steps;
-			}
+            num = (num * 3 + 1);
+            if (num > peak)
+                peak = num;
+            num /= 2;
+            steps += 2;
+        	}
+        	else {
+            	num /= 2;
+            	if (num > peak)
+                	peak = num;
+            	steps += 1;
+        	}
 			if (num > peak) {
 				peak = num;
 				peakStart = i;
