@@ -1,3 +1,4 @@
+# Written by OrangeMan432 on 8/18/2025
 from time import perf_counter
 
 num = int(input("Input a starting number: "))
