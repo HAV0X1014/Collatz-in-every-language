@@ -1,4 +1,5 @@
 # Written by HAV0X_ on 8/18/2025
+# Updated 8/26/2025
 number=0
 peak=0
 steps=0
@@ -9,20 +10,18 @@ read number
 echo "Starting number: $number"
 
 start=$(date +%s%N)
-while [ $number -gt 1 ];
-do
+while [ $number -gt 1 ]; do
+    if [ $number -gt $peak ]; then
+        peak=$number
+    fi
+    
     if [ $(($number % 2)) == 0 ]; then
         number=$((number / 2))
     else
         number=$((number * 3 + 1))
     fi
-
-if [ $number -gt $peak ]; then
-    peak=$number
-fi
-
-((steps++))
-
+    
+    ((steps++))
 done
 end=$(date +%s%N)
 

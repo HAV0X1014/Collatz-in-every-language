@@ -3,6 +3,7 @@
 // Feel free to reference this for the Fent version and more information: https://github.com/Inducible/Collatz-conjecture-Swift
 
 //Written by HAV0X_ with help from Inducible on 8/20/2025
+//Updated 8/26/2025
 import Foundation
 
 print("Input a positive integer to run the collatz conjecture on")
@@ -16,13 +17,14 @@ print("Starting number: ", CurrentNumber)
 let startingPoint = Date()
 
 while (CurrentNumber != 1) {
+    if (CurrentNumber > PeakNumber) {
+        PeakNumber = CurrentNumber
+    }
+    
     if (CurrentNumber % 2 == 0) {
         CurrentNumber = CurrentNumber / 2
     } else {
         CurrentNumber = ((CurrentNumber * 3) + 1)
-    }
-    if (CurrentNumber > PeakNumber) {
-        PeakNumber = CurrentNumber
     }
     Steps += 1
 }
