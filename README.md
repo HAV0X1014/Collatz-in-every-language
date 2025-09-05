@@ -1,6 +1,6 @@
 The collatz conjecture written in as many programming languages as possible - including non "real" languages.
 
-Also known as the 3n+1 and n / 2 problem. Basically if a given number is odd, multiply it by 3 and add 1. If it is odd, divide it by two. Repeat these steps until it reaches 1.
+Also known as the 3n+1 and n / 2 problem. Basically if a given number is odd, multiply it by 3 and add 1. If it is even, divide it by two. Repeat these steps until it reaches 1.
 
 This started as a challenge in an abanded Minecraft discord server to write the [collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) in as many programming languages as possible. Now it's time to revive that challenge and make it public!
 
