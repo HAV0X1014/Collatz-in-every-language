@@ -5,7 +5,7 @@ DATE-WRITTEN. 02-OCT-2025
 *> COBOL was suprisingly fun
 *> I might write more COBOL in the future
 
- DATA DIVISION.
+DATA DIVISION.
 WORKING-STORAGE SECTION.
 01 NUM PIC 9(9) VALUE 0.
 01 PEAK PIC 9(9) VALUE 0.
