@@ -1,3 +1,6 @@
+// @DrParanoya on 12/04/2025
+// Go compiles faster than Kotlin
+
 package main
 
 import (
