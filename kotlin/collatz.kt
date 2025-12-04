@@ -1,4 +1,4 @@
-// @DrParanoya on 08/23/2025
+// @DrParanoya on 12/04/2025
 // Collatz Conjecture in Kotlin
 // Kotlin takes a long time to compile >:(
 
