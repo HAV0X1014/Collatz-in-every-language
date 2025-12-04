@@ -11,6 +11,10 @@ fun main() {
     var number = scanner.nextInt()
     var peak = 0
     var steps = 0
+    if (number < 0) {
+        print("Invalid number!")
+        return
+    }
     val time = measureNanoTime {
         while (number != 1) {
             if (number % 2 == 0)
