@@ -1,0 +1,33 @@
+//Written by HAV0X_ on 12/31/2025
+//Made with https://github.com/kitlang-dev/kitc rust version of the kitlang compiler.
+//It doesn't currently support comments so remove these lines.
+
+include "stdio.h";
+include "time.h";
+
+function main() {
+    var number;
+    var peak = 0;
+    var steps = 0;
+
+    printf("Input a positive number to run the collatz conjecture on: ");
+    scanf("%d",&number);
+
+    printf("Starting number: %d\n", number);
+    var startTime = clock();
+    while (number != 1) {
+        if (number > peak) {
+            peak = number;
+        }
+        if (number % 2 == 0) {
+            number = number / 2;
+        } else {
+            number = number * 3 + 1;
+        }
+        steps = steps + 1;
+    }
+    var endTime = clock();
+
+    var duration = endTime - startTime;
+    printf("Steps: %d Peak number: %d Execution time: %d\n", steps, peak, duration);
+}
