@@ -1,0 +1,42 @@
+# Written by @DrParanoya on 01/04/2025
+# Collatz Conjecture in SVE
+# https://web.archive.org/web/20161022015444/http://kaivos.org/doc/sve.html
+
+puts::"Please enter a positive integer to run the collatz conjecture on: "
+s = readln()
+
+len = strlen::s
+
+number = 0
+
+for: i = len - 1, i >= 0, i-- {
+	number = number + (charat(s, i) - 48) * pow(10, len - i - 1)
+}
+
+if: number <= 0 {
+	raise::"Invalid input!"
+}
+
+steps = 0
+peak = 0
+
+start = sysclock()
+
+while: number != 1 {
+	if: number % 2 == 0 {
+		number = number / 2
+	} else: {
+		number = number * 3 + 1
+	}
+	
+	
+	if: number > peak {
+		peak = number
+	}
+	
+	steps++
+}
+
+end = sysclock()
+
+print::"Steps to reach 1: " + steps + "\nPeak number reached: " + peak + "\nTime taken: " + (end - start) + " milliseconds"
