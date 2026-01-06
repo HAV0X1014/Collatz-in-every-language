@@ -1,0 +1,50 @@
+Zedus Cycle Conjecture
+Author: Durga Shankar Akodia
+
+Let N denote the set of natural numbers.
+
+Define the function
+f(n) = |n − R(n)| on N,
+
+where R(n) is the number obtained by reversing the decimal digits of n, with leading zeros removed.
+
+Under repeated iteration of the function f, every natural number exhibits one of the following two behaviors:
+
+1. Zero Convergence
+Some numbers eventually become 0.
+This occurs when a palindrome is reached, since n = R(n) implies f(n) = 0.
+Once 0 is reached, the process terminates.
+
+2. Zedus Cycle Loop
+Some numbers never reach 0.
+Instead, they enter a finite non-zero cycle:
+n₁ → n₂ → … → nₖ → n₁
+This repeating loop is called a Zedus Cycle Loop.
+
+Additional Principle (Cycle Classification)
+
+The Zedus Cycle Conjecture further asserts that Zedus Cycle Loops occur in different classes based on digit length, digit structure, and numerical categories.
+Across these different classes, there exist infinitely many distinct Zedus Cycle Loops.
+
+Thus, under the Zedus Cycle Conjecture, every natural number either:
+• converges to 0, or
+• becomes trapped in a Zedus Cycle Loop.
+
+Examples of Zedus Cycle Loops
+
+Basic examples:
+2178 ↔ 6534
+21978 ↔ 65934
+219978 ↔ 659934
+
+Extended examples:
+65346534 ↔ 21782178
+653406534 ↔ 217802178
+6534006534 ↔ 2178002178
+65340006534 ↔ 21780002178
+
+Larger-scale examples:
+6534653465346534 ↔ 2178217821782178
+65346534065346534 ↔ 21782178021782178
+653465340065346534 ↔ 217821780021782178
+6534653400065346534 ↔ 2178217800021782178
