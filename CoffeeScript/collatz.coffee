@@ -1,10 +1,9 @@
 #Written by HAV0X_ on 12/28/2025
 #Written on coffeescript.org/#try and jsfiddle.net
-number = 0
-peak = 0
-steps = 0
 
 number = prompt "Input a positive integer to run the collatz conjecture on: "
+peak = number
+steps = 0
 console.log "Starting number: #{number}"
 
 startTime = performance.now()

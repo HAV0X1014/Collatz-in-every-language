@@ -8,7 +8,7 @@ object Main {
 
     var number: Long = scala.io.StdIn.readLong();
     var steps: Long = 0;
-    var peak: Long = 0;
+    var peak: Long = number;
 
     val start = System.nanoTime
 

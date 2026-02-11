@@ -9,6 +9,7 @@ U0 Main()
     U64 number = 0, peak = 0, steps = 0;
     "Please enter a positive integer to run the collatz conjecture on: \n";
     scanf("%llu", &number);
+    peak = number;
     U64 start = NowMilliseconds();
     while (number != 1) {
         if (number % 2 == 0) {

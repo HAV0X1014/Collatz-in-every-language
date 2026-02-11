@@ -7,7 +7,7 @@ use Time::HiRes;
 
 print "Please enter a positive integer to run the collatz conjecture on: ";
 $number = <>;
-$peak = 0;
+$peak = $number;
 $steps = 0;
 
 $start_time = [Time::HiRes::gettimeofday()];

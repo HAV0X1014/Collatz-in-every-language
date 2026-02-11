@@ -4,7 +4,7 @@ from time import clock
 num = int(input("Input a starting number: "))
 
 count = 0
-peak_num = 0
+peak_num = num
 
 start = clock()
 

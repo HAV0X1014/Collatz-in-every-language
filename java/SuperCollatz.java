@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 public class SuperCollatz {
     public static void main(String[] args) {
-        int steps = 0;
-        int peak = 0;
         System.out.println("Input a positive integer to run the collatz conjecture on: ");
         int number = new Scanner(System.in).nextInt();
+        int steps = 0;
+        int peak = number;
         System.out.println("Starting number: " + number);
         long startTime = System.nanoTime();
         while (number != 1) {

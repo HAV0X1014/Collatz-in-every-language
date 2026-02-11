@@ -11,6 +11,8 @@ int main() {
     printf("Please enter a positive integer to run the collatz conjecture on: ");
 
     if (!scanf("%llu", &number) || !number) { puts("Invalid input!"); return -1; }
+    
+    peak = number
 
     clock_t start = clock();
 

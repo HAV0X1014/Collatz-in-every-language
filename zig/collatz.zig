@@ -6,7 +6,7 @@ pub fn main() !void {
 
     var number: u64 = try std.fmt.parseInt(u64, slice, 10);
     var steps: u64 = 0;
-    var peak: u64 = 0;
+    var peak: u64 = number;
 
     const startTime: i128 = std.time.nanoTimestamp();
 

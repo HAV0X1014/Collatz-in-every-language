@@ -1,10 +1,9 @@
 <?php
 //Written by HAV0X_ on 9/1/2025
-$peak = 0;
-$steps = 0;
-
 echo("Enter a positive integer to run the collatz conjecture on: ");
 $number = (Int)readline();
+$peak = $number;
+$steps = 0;
 echo("Starting number: $number\n");
 $start_time = hrtime(true);
 while ($number != 1) {

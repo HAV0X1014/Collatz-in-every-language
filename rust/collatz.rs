@@ -15,7 +15,7 @@ fn main() {
         .expect("Failed to read line");
     let mut number: u64 = input_line.trim().parse().expect("Invalid input!");
 
-    let mut peak: u64 = 0;
+    let mut peak: u64 = number;
     let mut steps: u64 = 0;
 
     let start = Instant::now();

@@ -7,6 +7,8 @@ DIM steps AS INTEGER
 INPUT "Input a positive integer to run the collatz conjecture on: "; number
 PRINT "Starting number: "; number
 
+peak = number
+
 startTime = TIMER
 WHILE number <> 1
     IF number > peak THEN peak = number
