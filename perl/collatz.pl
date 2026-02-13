@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 # Written by @DrParanoya on 01/14/2026
+# Updated on 02/13/2026
 # First collatz of the year!
 
 
@@ -9,6 +10,12 @@ print "Please enter a positive integer to run the collatz conjecture on: ";
 $number = <>;
 $peak = $number;
 $steps = 0;
+
+print "\n";
+
+if ($number < 1) {
+	die "Invalid input!";
+}
 
 $start_time = [Time::HiRes::gettimeofday()];
 

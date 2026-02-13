@@ -4,7 +4,7 @@ from time import perf_counter
 num = int(input("Input a starting number: "))
 
 count = 0
-peak_num = num
+peak_num = 0
 
 start = perf_counter()
 

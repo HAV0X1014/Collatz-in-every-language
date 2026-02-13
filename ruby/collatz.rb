@@ -6,6 +6,11 @@ number = $stdin.gets.to_i
 peak = number
 steps = 0
 
+if number < 1
+  print "\nInvalid input!"
+  return
+end
+
 start = Time.now
 
 while number != 1

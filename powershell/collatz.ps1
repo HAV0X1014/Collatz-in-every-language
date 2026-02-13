@@ -1,8 +1,13 @@
 # Written by @DrParanoya on 02/11/2026
+# Updated on 02/13/2026
 
-[int] $number = Read-Host "Please enter a positive integer to run the collatz conjecture on"
-[int] $peak = $number
-[int] $steps = 0
+[System.Int64] $number = Read-Host "Please enter a positive integer to run the collatz conjecture on"
+[System.Int64] $peak = $number
+[System.Int64] $steps = 0
+
+if ($number -lt 1) {
+	throw "Invalid input!"
+}
 
 $stopwatch = [Diagnostics.Stopwatch]::StartNew()
 

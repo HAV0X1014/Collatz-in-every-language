@@ -1,5 +1,6 @@
 // Written with <3 by @DrParanoya on 08/21/2025
 // Updated on 02/11/2026
+// Updated on 02/13/2026
 // Collatz Conjecture in C++14
 
 #include <chrono>
@@ -7,10 +8,15 @@
 #include <iostream>
 
 int main() {
-    uint64_t number = 1, steps = 0, peak = 0;
+    int64_t number = 1, steps = 0, peak = 0;
     std::cout << "Please enter a positive integer to run the collatz conjecture on: ";
     std::cin >> number;
     peak = number;
+	
+	if (number < 1) {
+		std::cerr << "Invalid input!";
+		return -1;
+	}
 
     auto a = std::chrono::high_resolution_clock::now();
 

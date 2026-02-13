@@ -1,4 +1,5 @@
 // @DrParanoya on 12/04/2025
+//  Updated on 02/13/2026
 // Why does it take 5 lines to read an integer from stdin? Rust is even worse than C++
 
 use std::time::Instant;
@@ -13,7 +14,11 @@ fn main() {
     stdin()
         .read_line(&mut input_line)
         .expect("Failed to read line");
-    let mut number: u64 = input_line.trim().parse().expect("Invalid input!");
+    let mut number: i64 = input_line.trim().parse().expect("Invalid input!");
+    
+    if number < 1 {
+        panic!("Invalid input!");
+    }
 
     let mut peak: u64 = number;
     let mut steps: u64 = 0;

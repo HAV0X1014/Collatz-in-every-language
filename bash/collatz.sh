@@ -1,12 +1,11 @@
 # Written by HAV0X_ on 8/18/2025
 # Updated 8/26/2025
 number=0
+peak=0
 steps=0
 
 echo "Input a positive number to run the collatz conjecture on: "
 read number
-
-peak=$number
 
 echo "Starting number: $number"
 

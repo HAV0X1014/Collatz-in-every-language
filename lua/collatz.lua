@@ -4,7 +4,7 @@ io.write("Input a starting number: ")
 local num = tonumber(io.read())
 
 local count = 0
-local peak_num = num
+local peak_num = 0
 
 local start = os.clock()
 

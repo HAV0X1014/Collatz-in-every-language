@@ -7,9 +7,9 @@ using System;
 public class Program {
     public static void Main() {
         int steps = 0;
+        int peak = 0;
         Console.WriteLine("Input a positive integer to run the collatz conjecture on: ");
         int number = Convert.ToInt32(Console.ReadLine());
-        int peak = number;
         Console.WriteLine("Starting number: " + number);
         var watch = System.Diagnostics.Stopwatch.StartNew();
         while (number != 1) {

@@ -17,7 +17,7 @@ func main() {
 		fmt.Print("An error occured.")
 		return
 	}
-	if number <= 0 {
+	if number < 1 {
 		fmt.Print("Invalid number!")
 		return
 	}

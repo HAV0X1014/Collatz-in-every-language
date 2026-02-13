@@ -13,8 +13,7 @@ fun main() {
     var peak = number
     var steps = 0
     if (number < 0) {
-        print("Invalid number!")
-        return
+        throw IllegalArgumentException("Input must be non-negative");
     }
     val time = measureNanoTime {
         while (number != 1) {

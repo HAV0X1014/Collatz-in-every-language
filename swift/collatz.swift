@@ -10,7 +10,7 @@ print("Input a positive integer to run the collatz conjecture on")
 let Input = Int(readLine()!) ?? 0
 var CurrentNumber = Input
 
-var PeakNumber = Input
+var PeakNumber = 0
 var Steps = 0
 
 print("Starting number: ", CurrentNumber)
