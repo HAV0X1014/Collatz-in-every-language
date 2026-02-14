@@ -1,4 +1,5 @@
 // @DrParanoya on 12/04/2025
+// Updated on 02/11/2026
 // Go compiles faster than Kotlin
 
 package main
@@ -11,17 +12,19 @@ import (
 func main() {
 	fmt.Print("Please enter a positive integer to run the collatz conjecture on: ")
 	var number int64
-	var peak int64
-	var steps int64
 	_, err := fmt.Scanf("%d", &number)
 	if err != nil {
 		fmt.Print("An error occured.")
 		return
 	}
-	if number < 0 {
+	if number < 1 {
 		fmt.Print("Invalid number!")
 		return
 	}
+
+	var steps int64
+	peak := number
+
 	start := time.Now()
 	for ; number != 1; {
 		if number % 2 == 0 {
@@ -34,7 +37,6 @@ func main() {
 		}
 		steps++
 	}
-	var duration float64 = float64(time.Since(start).Nanoseconds()) / 1000000.0
-	fmt.Printf("Steps to reach 1: %d\nPeak number reached: %d\nExecution time: ", steps, peak)
-	fmt.Print(duration, " milliseconds")
+	var duration = time.Since(start).Nanoseconds()
+	fmt.Printf("Steps to reach 1: %d\nPeak number reached: %d\nExecution time (in nanoseconds): %d", steps, peak, duration)
 }

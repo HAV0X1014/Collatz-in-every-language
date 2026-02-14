@@ -1,4 +1,5 @@
 // @DrParanoya on 12/04/2025
+// Updated on 02/11/2026
 // Collatz Conjecture in Kotlin
 // Kotlin takes a long time to compile >:(
 
@@ -9,11 +10,10 @@ fun main() {
     val scanner = Scanner(System.`in`)
     print("Please enter a positive integer to run the collatz conjecture on: ")
     var number = scanner.nextInt()
-    var peak = 0
+    var peak = number
     var steps = 0
     if (number < 0) {
-        print("Invalid number!")
-        return
+        throw IllegalArgumentException("Input must be non-negative");
     }
     val time = measureNanoTime {
         while (number != 1) {
@@ -26,5 +26,5 @@ fun main() {
             ++steps
         }
     }
-    println("Steps to reach 1: $steps\nPeak number reached: $peak\nExecution time: " + time.toDouble() / 1000000 + " milliseconds")
+    println("Steps to reach 1: $steps\nPeak number reached: $peak\nExecution time: $time nanoseconds")
 }

@@ -1,40 +1,45 @@
 // Written with <3 by @DrParanoya on 08/21/2025
+// Updated on 02/11/2026
+// Updated on 02/13/2026
 // Collatz Conjecture in C++14
 
 #include <chrono>
 #include <cstdint>
-#include <iomanip>
 #include <iostream>
 
 int main() {
-    uint64_t num = 1, steps = 0, peak = 0, peakStart = 0, start = 1;
-    bool halfed = false;
-    std::cout << "Welcome\n\nPlease enter a positive integer to run the collatz conjecture on: ";
-    std::cin >> num;
+    int64_t number = 1, steps = 0, peak = 0;
+    std::cout << "Please enter a positive integer to run the collatz conjecture on: ";
+    std::cin >> number;
+    peak = number;
+	
+	if (number < 1) {
+		std::cerr << "Invalid input!";
+		return -1;
+	}
+
     auto a = std::chrono::high_resolution_clock::now();
-    while (num != 1) {
-        if (num % 2) {
-            num = (num * 3 + 1);
-            if (num > peak)
-                peak = num;
-            num /= 2;
+
+    while (number != 1) {
+        if (number % 2) {
+            number = (number * 3 + 1);
+            if (number > peak)
+                peak = number;
+            number /= 2;
             steps += 2;
         }
         else {
-            num /= 2;
-            if (num > peak)
-                peak = num;
+            number /= 2;
+            if (number > peak)
+                peak = number;
             steps += 1;
         }
     }
     auto b = std::chrono::high_resolution_clock::now();
-    auto timeNano = std::chrono::duration_cast<std::chrono::nanoseconds>(b - a).count();
-    double timeMilli = static_cast<double>(timeNano) / 1'000'000.0;
-    double timeSeconds = timeMilli / 1'000.0;
+    auto time = std::chrono::duration_cast<std::chrono::nanoseconds>(b - a).count();
+
     std::cout <<
         "\nSteps to reach 1: " << steps <<
         "\nPeak number reached: " << peak <<
-        "\n\nExecution time\n  in nanoseconds: " << timeNano << '\n';
-        if (timeNano > 1'000'000) std::cout << "  in milliseconds: " << std::fixed << std::setprecision(3) << timeMilli << '\n';
-        if (timeMilli > 1000) std::cout << "  in seconds: " << std::fixed << std::setprecision(3) << timeSeconds << '\n';
+        "\nExecution time (in nanoseconds): " << time << '\n';
 }

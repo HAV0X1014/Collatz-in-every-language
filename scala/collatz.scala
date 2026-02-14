@@ -1,14 +1,19 @@
 // Written by @DrParanoya on 12/29/2025
+//  Updated on 02/13/2026
 // Collatz Conjecture in Scala
 
 object Main {
   def main(args: Array[String]): Unit =
 
-    println("Please enter a positive integer to run the collatz conjecture on: ");
+    print("Please enter a positive integer to run the collatz conjecture on: ");
 
     var number: Long = scala.io.StdIn.readLong();
     var steps: Long = 0;
-    var peak: Long = 0;
+    var peak: Long = number;
+	
+	if (number < 1) {
+        throw new Exception("Invalid input!");
+	}
 
     val start = System.nanoTime
 

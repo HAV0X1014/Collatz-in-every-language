@@ -1,4 +1,5 @@
 // Written with <3 by @DrParanoya on 08/23/2025
+// Updated on 02/13/2026
 // Collatz Conjecture in C
 
 #include <stdint.h>
@@ -6,11 +7,16 @@
 #include <time.h>
 
 int main() {
-    uint64_t number = 0, peak = 0, steps = 0;
+    int64_t number = 0, peak = 0, steps = 0;
 
     printf("Please enter a positive integer to run the collatz conjecture on: ");
 
-    if (!scanf("%llu", &number) || !number) { puts("Invalid input!"); return -1; }
+    if (!scanf("%lld", &number) || number < 1) {
+		puts("Invalid input!");
+		return -1;
+	}
+    
+    peak = number
 
     clock_t start = clock();
 
