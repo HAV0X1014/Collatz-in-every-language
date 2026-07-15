@@ -1,0 +1,43 @@
+// Written by @DrParanoya with <3 on 14/07/2026 (DD/MM/YYYY)
+// Fireball is a cool language, check it out: https://github.com/fireball-lang/fireball
+
+mod collatz;
+
+#[extern]
+pub func printf(format: *u8, ...) i32
+#[extern]
+pub func scanf(format: *u8, ...) i32
+#[extern]
+pub func puts(str: *u8) i32
+
+#[extern]
+pub func clock() i64
+
+func main() {
+    var number: i64 = 5;
+    puts("Please enter a positive integer to run the collatz conjecture on: ".ptr);
+
+    if (scanf("%lld".ptr, &number) == 0 || number <= 0) {
+        puts("Invalid input!".ptr);
+        return;
+    }
+    var peak: i64 = number;
+    var steps: i64 = 0;
+
+    var start = clock();
+
+    while (number != 1) {
+        if (number % 2 == 0)
+            number /= 2;
+        else
+            number = number * 3 + 1;
+
+        if (number > peak)
+            peak = number;
+        steps++;
+    }
+
+    var end = clock();
+
+    printf("Steps to reach 1: %lld\nPeak number reached: %lld\nExecution time (in nanoseconds): %.10f".ptr, steps, peak, ((end - start) as f64) * (1000000000 as f64) / (1000000 as f64));
+}
