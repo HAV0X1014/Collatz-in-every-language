@@ -1,10 +1,15 @@
 -- Written by FastPlays08 on 30/12/2025
+-- Updated 5/10/2026
 
 io.write("Input a starting number: ")
 local num = tonumber(io.read())
 
+if not num or num < 1 then
+    os.exit(1)
+end
+
 local count = 0
-local peak_num = 0
+local peak_num = num
 
 local start = os.clock()
 
